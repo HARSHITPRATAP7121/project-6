@@ -18,7 +18,7 @@ def predict():
 
     ten = float(request.args.get('ten'))
     twell = float(request.args.get('twell'))
-    btech = float(request.args.get('btech'))
+    b_tech = float(request.args.get('b_tech'))
     seven = float(request.args.get('seven'))
     six = float(request.args.get('six'))
     five = float(request.args.get('five'))
@@ -47,7 +47,7 @@ def predict():
         model=pickle.load(open('PlacementAnalysis_NB.pkl','rb'))
         accr="73.33%"
 
-    prediction = model.predict([[ten, twell, btech, seven, six, five, final, med]])
+    prediction = model.predict([[ten, twell, b_tech, seven, six, five, final, med]])
     if prediction==1:
          message="Booyah! you will be placed"
     else:
