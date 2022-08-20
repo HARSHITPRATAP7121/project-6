@@ -49,9 +49,9 @@ def predict():
 
     prediction = model.predict([[ten, twell, b_tech, seven, six, five, final, med]])
     if prediction==1:
-         message="Booyah! you will be placed"
+         message="you will be placed"
     else:
-        message="Unfortunately, you will not be placed, better luck next time"
+        message=" you will not be placed"
 
     return render_template('index.html', prediction_text=message, accuracy_text='Accuracy of Model :{}'.format(accr))
 
